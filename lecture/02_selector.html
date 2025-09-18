@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .group1 {
+        background-color: azure;
+      }
+      .group2 {
+        background-color: cadetblue;
+      }
+      .group3 {
+        color: tomato;
+        font-weight: 600;
+      }
+      #test ~ div {
+        background-color: antiquewhite;
+      }
+      #test + div {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="group1">class선택자 테스트1</li>
+      <li class="group1 group3">class선택자 테스트2</li>
+      <li class="group2 group3">class선택자 테스트3</li>
+      <li class="group2">class선택자 테스트4</li>
+    </ul>
+    <div>
+      <div id="test">div1</div>
+      <div>div2</div>
+      <div>div3</div>
+      <div>div4</div>
+      <h2>h2</h2>
+      <div>
+        <div>div div5</div>
+      </div>
+    </div>
+    <form action="server/test.do" method="get">
+      이름:
+      <input type="text" name="userName" /><br />
+      과일:
+      <input type="checkbox" name="fruit" value="apple" id="apple" />
+      <label for="apple">사과</label>
+      <input type="checkbox" name="fruit" value="mango" id="mango" />
+      <label for="mango">망고</label>
+      <input type="checkbox" name="fruit" value="grape" id="grape" />
+      <label for="grape">포도</label><br />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>
