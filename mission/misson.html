@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      input{
+        margin-right:5px;;
+      }
       .container{
         display: flex;
         flex-direction: row;
@@ -12,6 +15,26 @@
       .box{
         flex-grow: 1;
       }
+      #login-form02>.login-container{
+        display:flex;
+      }
+      #login-form02>.login-container>.button-box{
+        align-self: center;
+      }
+      #login-form03{
+        width:310px;
+      }
+      #login-form03>p, #login-form03>div{
+        text-align: center;
+      }
+      #login-form03 td{
+        height:15px;
+        padding:0;
+      }
+      #login-form03 p{
+        margin: 0;
+      }
+
     </style>
   </head>
   <body>
@@ -58,16 +81,273 @@
       <h3>연습2</h3>
       <div>
         <ul>
-          <li>프록래밍 언어</li>
+          <li>프로그래밍 언어
           <ol>
-            <li>Java</li>
-            <li>Excel</li>
+            <li><strong>Java</strong></li>
+            <li><s>Excel</s></li>
             <li>C</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Ruby</li>
+            <li>C<small>++</small></li>
+            <li><u>Python</u></li>
+            <li><u>Ruby</u></li>
           </ol>
+          </li>
         </ul>
+        <ul>
+          <li>데이터베이스
+            <ol>
+              <li><strong>MySQL</strong></li>
+              <li>Oracle</li>
+              <li>MS SQL Server</li>
+              <li><s>PowerPoint</s></li>
+              <li><em>PostreSQL</em></li>
+              <li><i>Mariadb</i></li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="box">
+          <h3>연습1</h3>
+          <table border="1">
+          <tr>
+            <td rowspan="5">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td rowspan="3">10</td>
+            <td>11</td>
+            <td>12</td>
+            <td rowspan="2">13</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td colspan="5">19</td>
+          </tr>
+          </table>
+        </div>
+        <div class="box">
+          <h3>연습2</h3>
+          <table border="1">
+            <tr>
+              <td colspan="4">1</td>
+              <td rowspan="7">2</td>
+            </tr>
+            <tr>
+              <td rowspan="5">3</td>
+              <td rowspan="4">4</td> 
+              <td colspan="2">5</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td rowspan="4">7</td>
+            </tr>
+            <tr>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td colspan="2">10</td>
+            </tr>
+            <tr>
+              <td colspan="4">11</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="box">
+          <h3>연습3</h3>
+          <table border="1">
+           <tr>
+            <td>이름</td>
+            <td>나이</td>
+            <td width="200">주소</td>
+           </tr>
+           <tr>
+            <td>홍길동</td>
+            <td>20세</td>
+            <td>서울시 마포구 노고산동</td>
+           </tr>
+           <tr>
+            <td>특기</td>
+            <td colspan="2">먹기</td>
+           </tr>
+           <tr>
+            <td rowspan="2">신체</td>
+            <td colspan="2">180.0cm</td>
+           </tr>
+           <tr>
+            <td colspan="2">83kg</td>
+           </tr>   
+          </table>
+        </div>
+        <div class="box">
+          <h3>연습4</h3>
+          <p>우리펜션객실안내</p>
+          <table border="1">
+            <tr>
+              <th>방이름</th>
+              <th>고객구분</th>
+              <th>정원</th>
+              <th>가격</th>
+            </tr>
+            <tr>
+              <td>콜로라도</td>
+              <td>여성 전용</td>
+              <td rowspan="3">4인실</td>
+              <td rowspan="4">100,000원</td>
+            </tr>
+            <tr>
+              <td rowspan="2">아레나도</td>
+              <td>가족용</td>
+            </tr>
+            <tr>
+              <td>커플용</td>
+            </tr>
+            <tr>
+              <td>엘레나</td>
+              <td>커플 전용</td>
+              <td>2인실</td>
+
+            </tr>
+            <tr>
+              <th colspan="4">6월 15일까지 전 객실 50% 할인</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3>연습1</h3>
+          <form action="server/login" method="get" id="login-form01">
+            <input type="email" name="userEmail"><input type="password" name="userPw" placeholder="비밀번호"><input type="submit" value="로그인"><br><br>
+          </form>
+          <h3>연습2</h3>
+          <form action="server/login" method="get" id="login-form02">
+            <div class="login-container">
+              <div class="input-box">
+                <input type="text" placeholder="아이디" name="userId"><br>
+                <input type="password" placeholder="비밀번호" name="userPw">
+              </div>
+              <div class="button-box">
+                <input type="submit" value="로그인">
+              </div>
+            </div>
+          </form>
+          <h3>연습3</h3>
+          <form action="server/info" method="get" id="login-form03">
+            <p><strong>개인 정보 작성</strong></p>
+            <table>
+              <tr>
+                <td><p>이름</p></td>
+                <td><input type="text" name="" id=""></td>
+              </tr>
+              <tr>
+                <td><p>메일 주소</p></td>
+                <td><input type="text" name="" id=""></td>
+              </tr>
+              <tr>
+                <td><p>연락처</p></td>
+                <td><input type="text" name="" id=""></td>
+              </tr>
+              <tr>
+                <td>블로그/홈페이지</td>
+                <td><input type="text" name="" id=""></td>
+              </tr>
+            </table>
+            <div>
+              <input type="submit" value="제출하기">
+              <input type="reset" value="다시작성">
+            </div>
+          </form>
+          <h3>연습4</h3>
+          <form action="">
+            <div>
+              <label for="user-id">아이디</label>
+              <input type="text" id="user-id" name="userId" placeholder="아이디">
+            </div>
+            <div>
+              <label for="user-pw">비밀번호</label>
+              <input type="password" id="user-pw" name="userPw" placeholder="새 비밀번호">
+            </div>
+            <div>
+              <label for="check-pw">비밀번호 확인</label>
+              <input type="password" id="check-pw" name="checkPw" placeholder="비밀번호 확인">
+            </div>
+            <div>
+              <div>
+                <label for="user-email">이메일</label>
+                <input type="email" id="user-email" name="userEmail" placeholder="이메일">@
+                <input type="email" id="user-email" name="userEmail" placeholder="직접 입력 가능" list="defaultEmails">
+                <datalist id="defaultEmails">
+                  <option value="naver.com"></option>
+                  <option value="gmail.com"></option>
+                  <option value="daum.net"></option>
+                </datalist>
+              </div>
+              <fieldset>
+                <legend>성별</legend>
+                <input type="radio" name="gender" id="men">
+                <label for="men">남자</label>
+                <input type="radio" name="gender" id="women">
+                <label for="women">여자</label>
+              </fieldset>
+              <fieldset>
+                <legend>관심</legend>
+                <input type="checkbox" name="" id="">IT
+                <input type="checkbox" name="" id="">경영
+                <input type="checkbox" name="" id="">금융
+                <input type="checkbox" name="" id="">제조
+                <input type="checkbox" name="" id="">서비스
+                <input type="checkbox" name="" id="">기타
+              </fieldset>
+              <div>
+                <label for="">거주지</label>
+                <select name="" id="">
+                  <option value="" disabled selected>::선택하세요::</option>
+                  <option value="">서울</option>
+                  <option value="">대전</option>
+                  <option value="">대구</option>
+                  <option value="">부산</option>
+                  <option value="">인천</option>
+                </select>
+                <input type="text">
+              </div>
+              <div>
+                <label for="">자기 소개</label><br>
+                <textarea name="" id="" rows="5" cols="35">200자 이내 간단히 작성</textarea>
+              </div>
+              <div>
+                <label for="">이력서</label>
+                <input type="file">
+              </div>
+              <div>
+                <label for="">제출일</label>
+                <input type="text">
+              </div>
+              <input type="submit" value="제출">
+              <input type="reset" value="다시입력">
+            </div>
+
+          </form>
       </div>
     </div>
   </body>
