@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body,
+    * {
+      margin: 0;
+    }
+    .layout-container {
+      display: grid;
+      grid-template-rows: 50px 1fr 50px;
+      width: 100%;
+      min-height: 100dvh;
+    }
+    .header {
+      background-color: black;
+      color: white;
+    }
+    .footer {
+      background-color: black;
+      color: white;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      grid-gap: 10px;
+      width: 100%;
+      height: calc(100vh - 20px);
+      margin: 10px 0;
+      padding: 0 10px;
+    }
+    .nav {
+      border: 1px solid black;
+    }
+    .main {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    .main .box {
+      font-size: 20px;
+    }
+    .side {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <div class="layout-container">
+      <header class="header">header</header>
+      <div class="content">
+        <nav class="nav">
+          <p>네비게이션</p>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+        <main class="main">
+          <p>메인콘텐츠(Main)</p>
+          <div class="box">양 옆은 고정폭, 가운데는 가변폭</div>
+          <p>Hint 가운데 영역은 flex:1</p>
+        </main>
+        <aside class="side"></aside>
+      </div>
+      <footer class="footer">footer</footer>
+    </div>
+  </body>
+</html>

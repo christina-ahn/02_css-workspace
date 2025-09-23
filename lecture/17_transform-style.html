@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 400px;
+        height: 500px;
+        border: 1px dashed #aaa;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+      .item {
+        border: 5px solid black;
+        background-color: pink;
+      }
+      .item1:hover {
+        transform: translateX(10px);
+      }
+      .item2:hover {
+        transform: translateY(-10px);
+      }
+      .item3:hover {
+        transform: translate(10px, 10px);
+      }
+      .item4:hover {
+        transform: rotateX(45deg);
+      }
+      .item5:hover {
+        transform: rotateY(45deg);
+      }
+      .item6:hover {
+        transform: rotate(45deg);
+      }
+      .item7:hover {
+        transform: scaleX(1.5);
+      }
+      .item8:hover {
+        transform: scaleY(1.5);
+      }
+      .item9:hover {
+        transform: scale(1.5);
+      }
+      .item10:hover {
+        transform: skewX(15deg);
+      }
+      .item11:hover {
+        transform: skewY(15deg);
+      }
+      .item12:hover {
+        transform: skew(15deg, 15deg);
+      }
+    </style>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item5">item5</div>
+      <div class="item item6">item6</div>
+      <div class="item item7">item7</div>
+      <div class="item item8">item8</div>
+      <div class="item item9">item9</div>
+      <div class="item item10">item10</div>
+      <div class="item item11">item11</div>
+      <div class="item item12">item12</div>
+      <p></p>
+    </div>
+  </body>
+</html>
